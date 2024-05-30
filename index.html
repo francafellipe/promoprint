@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PromoPrint</title>
+    <link rel="stylesheet" href="style/style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.70/pdfmake.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.70/vfs_fonts.js"></script>
+</head>
+<body>
+    <header>
+        <h1>PromoPrint</h1>
+    </header>
+    <main class="container">
+        <section id="entrada-dados">
+            <h2>Entrada de Dados</h2>
+            <form id="formulario-produto">
+                <fieldset>
+                    <legend>Informações do Produto</legend>
+                    <div class="campo">
+                        <label for="nome-produto">Nome do Produto:</label>
+                        <input type="text" id="nome-produto" name="nome-produto" required>
+                    </div>
+                    <div class="campo">
+                        <label for="preco-antigo">Preço Antigo:</label>
+                        <input type="number" id="preco-antigo" name="preco-antigo" required>
+                    </div>
+                    <div class="campo">
+                        <label for="preco-novo">Preço Novo:</label>
+                        <input type="number" id="preco-novo" name="preco-novo" required>
+                    </div>
+                    <div class="campo">
+                        <button type="button" id="calcular-desconto">Calcular Desconto</button>
+                    </div>
+                    <div class="campo">
+                        <label for="desconto-porcentagem">Desconto (%):</label>
+                        <input type="number" id="desconto-porcentagem" name="desconto-porcentagem" readonly>
+                    </div>
+                    <div class="campo">
+                        <button type="button" id="pdf-gerar">Gerar PDF</button>
+                    </div>
+                </fieldset>
+            </form>
+        </section>
+        <section id="geracao-pdf">
+            <h2>Geração de PDF</h2>
+            <div id="visualizacao-pdf">
+                <iframe id="iframe-pdf" style="width: 100%; height: 500px;"></iframe>
+            </div>
+            <div>
+                <button id="inserir-template">Selecionar PDF</button>
+                <button id="editar">Editar</button>
+                <button id="download-pdf">Baixar PDF</button>
+                <button id="imprimir-pdf">Imprimir PDF</button>
+            </div>
+        </section>
+        <section id="exemplos-cartazes">
+            <h2>Exemplos de Cartazes</h2>
+            <div id="galeria-cartazes"></div>
+            <div id="detalhes-exemplos"></div>
+        </section>
+    </main>
+    <footer>
+        <nav>
+            <ul>
+                <li><a href="#politicas-privacidade">Políticas de Privacidade</a></li>
+                <li><a href="#termos">Termos de Uso</a></li>
+                <li><a href="#redes">Redes Sociais</a></li>
+            </ul>
+        </nav>
+    </footer>
+    <script src="Script/script.js"></script>
+</body>
+</html>
